@@ -1,0 +1,135 @@
+.title {
+    width: 100%;
+    overflow: hidden;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.title h4 {
+    width: 100%;
+    overflow: hidden;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    font-size: 28px;
+    color: #000000;
+}
+
+.title span {
+    width: 100%;
+    overflow: hidden;
+    display: block;
+    margin: 0 auto;
+    color: #999999;
+    font-size: 18px;
+}
+.clear {
+    width: 100%;
+    overflow: hidden;
+    display: block;
+    margin: 0 auto;
+    padding-top: 80px;
+    padding-bottom: 60px;
+}
+.clear .container {
+    margin-top: 60px;
+}
+#portfolio {
+    display: block;
+    margin: 0 auto;
+    margin-top: 20px;
+    text-align:left;
+    padding-left:5px;
+}
+#portfolio  #phone {
+    height: 50px;
+    text-align: left;
+    text-indent: 20px;
+    float: left;
+    margin-bottom: 10px!important;
+    margin-right: 10px;
+    border: 1px solid #CCCCCC;
+}
+#portfolio .valid_container {
+    height: 56px;
+    float: left;
+    background-color: #fff;
+    border-radius: 4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    margin-bottom: 10px;
+    margin-right: 0;
+    padding-right: 0;
+}
+.valid_container #validcode {
+    height: 50px;
+    background-color: #fff;
+    color: #4BCB87;
+    text-align: center;
+    border: 1px solid #CCCCCC;
+}
+.valid_container img {
+    margin-top: 3px;
+}
+#btnSubmit {
+    width: 240px;
+    height: 50px;
+    overflow: hidden;
+    text-align: center;
+    line-height: 50px;
+    font-size: 16px;
+    color: #fff;
+    background: #FDA200;
+    border: none;
+    display: inline-block;
+}
+#btnSubmit:hover {
+    background: #FFB42E;
+}
+ .img_container {
+    display: inline-block;
+    border: 1px solid #CCCCCC;
+    border-left: none;
+    width: 81px;
+    height: 50px;
+    background: #F2F2F2;
+     float: left;
+     margin-right: 30px;
+}
+ .img_container img {
+     margin-top: 13px;
+     margin-left: 20px;
+
+ }
+.clear .container {
+    width: 960px;
+}
+
+/*响应式调整*/
+@media only screen and (max-width: 414px) {
+    .valid_container  {
+        padding: 0;
+    }
+    .clear {
+        margin-top: 1px;
+        padding-top: 20px;
+    }
+    .clear .container {
+        width: 100%;
+        overflow: hidden;
+        display: block;
+        margin: 0 auto;
+        margin-top: 30px;
+    }
+    #portfolio {
+        width: 100%;
+        overflow: hidden;
+        display: block;
+        margin: 0 auto;
+    }
+    #phone {
+        width: 100%;
+    }
+
+}

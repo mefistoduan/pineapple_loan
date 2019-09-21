@@ -1,0 +1,877 @@
+#carousel-example-generic {
+    height: 640px;
+    overflow: hidden;
+    background: -webkit-linear-gradient(left,  #1AB19D ,#005E84); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(right,  #1AB19D, #005E84); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(right,  #1AB19D, #005E84); /* Firefox 3.6 - 15 */
+    background: linear-gradient(to right,  #1AB19D , #005E84); /* 标准的语法 */
+}
+#carousel-example-generic .bg_img {
+    width: 100%;
+    overflow: hidden;
+    display: block;
+    margin: 0 auto;
+    background: url("../image/bg.png") top center no-repeat;
+}
+
+.carousel-indicators {
+    bottom: 120px !important;
+}
+
+.carousel-indicators li {
+    width: 8px;
+    height: 8px;
+    background: rgba(255, 255, 255, 0.66);
+    border: none;
+}
+
+.carousel-indicators li.active {
+    width: 16px;
+    height: 8px;
+    background: #fff;
+    border: none;
+}
+
+.carousel-inner {
+    height: 510px;
+}
+
+.carousel-inner .item {
+    height: 100%;
+}
+
+.item .part {
+    overflow: hidden;
+    display: block;
+    margin: 0 auto;
+    margin-top: 160px;
+    color: #fff;
+}
+
+.part h3 {
+    width: 100%;
+    overflow: hidden;
+    display: block;
+    margin: 0 auto;
+    font-size: 48px;
+    font-weight: 550;
+    text-align: center;
+    text-align: center;
+}
+
+.part h3 em {
+    font-size: 48px;
+}
+
+.part s {
+    width: 100%;
+    overflow: hidden;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 27px;
+    color: rgba(255, 255, 255, 0.73);
+    text-decoration: none;
+    margin-top: 10px;
+    margin-bottom: 34px;
+}
+
+.part i {
+    width: 100%;
+    overflow: hidden;
+    display: block;
+    margin: 0 auto;
+    font-size: 16px;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 47px;
+}
+
+.part button {
+    width: 200px;
+    height: 46px;
+    overflow: hidden;
+    display: block;
+    margin: 0 auto;
+    border: 1px solid #35BCB8;
+    text-align: center;
+    line-height: 46px;
+    font-size: 16px;
+    color: #00D9D3;
+    background: none;
+}
+
+.part button:hover {
+    background: #00D9D3;
+    color: #fff;
+}
+
+.item2 em {
+    width: 100%;
+    overflow: hidden;
+    display: block;
+    margin: 0 auto;
+    font-size: 48px;
+}
+
+.item2 em img {
+    position: relative;
+    top: -25px
+}
+
+.tip_part {
+    width: 100%;
+    overflow: hidden;
+    display: block;
+    margin: 0 auto;
+    height: 120px;
+    margin-top: 20px;
+    background: #009590;
+    border-top: 1px solid #7CC4D2;
+}
+
+.tip_part li {
+    width: 19.5%;
+    float: left;
+    padding-bottom: 20px;
+    margin-top: 25px;
+    border-left: 1px solid #00a29a;
+    padding-left: 12px;
+    font-size: 14px;
+    color: #fff;
+    cursor: pointer;
+}
+.tip_part li:hover h5 {
+    color: #00FFDD;
+}
+.tip_part li:nth-child(5) {
+    border-right: 1px solid #00a29a;
+}
+
+.tip_part li .lt {
+    width: 44px;
+    float: left;
+    margin-left: 15px;
+}
+
+.tip_part li .rt {
+    width: 135px;
+    float: right;
+}
+
+.tip_part .lt i {
+    width: 44px;
+    height: 44px;
+    margin: 0 auto;
+    background: #009494;
+    border: 1px solid #3EE9E9;
+    text-align: center;
+    line-height: 44px;
+    font-size: 22px;
+    color: #fff;
+    border-radius: 250px;
+    display: block;
+    margin-top: 5px;
+}
+
+.tip_part .rt h5 {
+    width: 100%;
+    overflow: hidden;
+    display: block;
+    margin: 0 auto;
+    font-size: 16px;
+    font-weight: 550;
+    margin-bottom: 5px;
+    color: #fff;
+}
+
+.tip_part .rt img {
+    margin-left: 10px;
+}
+
+.tip_part .yellow {
+    color: #FFFF00;
+}
+
+.tip_part .rt span {
+    height: 18px;
+    font-size: 14px;
+    line-height: 18px;
+    width: 100%;
+    overflow: hidden;
+    display: block;
+    margin: 0 auto;
+    color: #fff;
+}
+
+.advantage {
+    width: 100%;
+    overflow: hidden;
+    display: block;
+    margin: 0 auto;
+    padding-top: 74px;
+    padding-bottom: 77px;
+    background: #F5F5F5;
+}
+
+.title {
+    width: 100%;
+    overflow: hidden;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.title h4 {
+    width: 100%;
+    overflow: hidden;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    font-size: 28px;
+    color: #000000;
+}
+
+.title span {
+    width: 100%;
+    overflow: hidden;
+    display: block;
+    margin: 0 auto;
+    color: #999999;
+    font-size: 18px;
+    padding-top: 10px;
+}
+
+.advantage ul {
+    overflow: hidden;
+    display: block;
+    margin: 0 auto;
+    margin-top: 60px;
+}
+
+.advantage ul li {
+    width: 33%;
+    float: left;
+}
+
+.advantage li a {
+    width: 98%;
+    overflow: hidden;
+    display: block;
+    margin: 0 auto;
+    height: 220px;
+    background: #fff;
+    padding: 30px 19px;
+    border-bottom: 4px solid #fff;
+    margin-bottom: 30px;
+    text-decoration: none;
+    color: #000000;
+    text-align: center;
+}
+.advantage li.active a {
+    border-bottom: 4px solid #1AB19D;
+}
+.advantage li a:hover {
+    border-bottom: 4px solid #1AB19D;
+}
+.advantage li a em {
+    margin-right: 20px;
+}
+
+.advantage li img {
+    width: 54px;
+    overflow: hidden;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 16px;
+}
+
+.advantage li h5 {
+    width: 100%;
+    overflow: hidden;
+    display: block;
+    margin: 0 auto;
+    font-size: 16px;
+    font-weight: 550;
+    margin-bottom: 22px;
+    text-align: center;
+}
+
+.advantage li span {
+    width: 100%;
+    overflow: hidden;
+    display: block;
+    margin: 0 auto;
+    font-size: 14px;
+    color: #777777;
+    height: 30px;
+    text-align:left;
+}
+
+.cube {
+    width: 100%;
+    overflow: hidden;
+    display: block;
+    margin: 0 auto;
+    background: url("../image/black.png") top center no-repeat;
+    height: 550px;
+}
+
+.cube_logo_icon {
+    width: 263px;
+    overflow: hidden;
+    margin-left: 160px;
+    margin-top: 120px;
+    float: left;
+}
+
+.cube .rt {
+    width: 560px;
+    float: right;
+    margin-top: 120px;
+    color: #fff;
+}
+
+.cube .rt h5 {
+    width: 100%;
+    overflow: hidden;
+    display: block;
+    margin: 0 auto;
+    font-size: 34px;
+    font-weight: 550;
+}
+
+.cube .rt span {
+    width: 100%;
+    overflow: hidden;
+    display: block;
+    margin: 0 auto;
+    margin-top: 10px;
+    font-size: 29px;
+}
+
+.cube .rt s {
+    width: 100%;
+    height: 80px;
+    overflow: hidden;
+    display: block;
+    margin: 0 auto;
+    margin-top: 20px;
+    font-size: 18px;
+    line-height: 40px;
+    text-decoration: none;
+}
+
+.cube .rt img {
+    position: relative;
+    top: 5px;
+    margin-left: 10px;
+}
+
+.cube button {
+    width: 273px;
+    height: 52px;
+    color: #fff;
+    line-height: 52px;
+    overflow: hidden;
+    background: #009783;
+    text-align: center;
+    font-size: 18px;
+    border: none;
+    float: left;
+    outline: none;
+    margin-top: 44px;
+}
+
+.cube button:hover {
+    background: #00C9AF;
+}
+
+.case {
+    width: 100%;
+    overflow: hidden;
+    display: block;
+    margin: 0 auto;
+    background: #fff;
+    padding-top: 75px;
+    padding-bottom: 60px;
+}
+
+.sel {
+    height: 484px;
+    margin-top: 60px;
+}
+
+.sel .lt {
+    width: 260px;
+    height: 484px;
+    float: left;
+}
+
+.sel .rt {
+    width: 880px;
+    height: 484px;
+    float: right;
+}
+
+.sel .lt ul {
+    width: 100%;
+    overflow: hidden;
+    display: block;
+    margin: 0 auto;
+}
+
+.sel .lt li {
+    width: 100%;
+    overflow: hidden;
+    display: block;
+    margin: 0 auto;
+    height: 80px;
+    background: #13BEA8;
+    color: #fff;
+    border-bottom: 1px solid #00CEB3;
+}
+.sel .lt li.active {
+    background: #008877;
+}
+.sel .lt li:hover {
+    background: #008877;
+}
+
+.sel .lt li span {
+    width: 100%;
+    overflow: hidden;
+    display: block;
+    margin: 0 auto;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 7px;
+}
+
+.sel .lt li em {
+    width: 80%;
+    overflow: hidden;
+    display: block;
+    margin: 0 auto;
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.4);
+    text-align: center;
+    border-bottom: 1px solid #00CEB3;
+    padding-bottom: 25px;
+}
+
+.sel .lt li:hover em {
+    color: #fff;
+}
+
+.sel .rt ul {
+    width: 100%;
+    height: 480px;
+    overflow: hidden;
+    display: block;
+    margin: 0 auto;
+}
+
+.sel .rt li {
+    width: 100%;
+    height: 480px;
+    overflow: hidden;
+    display: none;
+    margin: 0 auto;
+    padding-top: 40px;
+    padding-left: 80px;
+}
+
+.sel .rt li.cb1 {
+    background: url("../image/cb1.png") top center no-repeat;
+    background-size: 100% 100%;
+}
+
+.sel .rt li.cb2 {
+    background: url("../image/cb2.png") top center no-repeat;
+    background-size: 100% 100%;
+}
+
+.sel .rt li.cb3 {
+    background: url("../image/cb3.png") top center no-repeat;
+    background-size: 100% 100%;
+}
+
+.sel .rt li.cb4 {
+    background: url("../image/cb4.png") top center no-repeat;
+    background-size: 100% 100%;
+}
+
+.sel .rt li.cb5 {
+    background: url("../image/cb5.png") top center no-repeat;
+    background-size: 100% 100%;
+}
+
+.sel .rt li.cb6 {
+    background: url("../image/cb6.png") top center no-repeat;
+    background-size: 100% 100%;
+}
+.sel .rt li img {
+    margin-left: 15px;
+}
+.sel .rt li h5 {
+    width: 100%;
+    overflow: hidden;
+    display: block;
+    margin: 0 auto;
+    font-size: 24px;
+    color: #fff;
+    margin-top: 15px;
+    margin-bottom: 30px;
+}
+
+.sel .rt li span {
+    width: 431px;
+    overflow: hidden;
+    display: block;
+    font-size: 14px;
+    color: #fff;
+    text-align: left;
+    line-height: 20px;
+}
+
+.sel .rt li button {
+    width: 137px;
+    height: 46px;
+    color: #fff;
+    line-height: 46px;
+    overflow: hidden;
+    background: #FDA200;
+    text-align: center;
+    font-size: 14px;
+    border: none;
+    float: left;
+    outline: none;
+    margin-top: 44px;
+}
+
+.sel .rt li button:hover {
+    background: #FFB42E;
+}
+
+.sel .rt li.active {
+    display: block;
+}
+
+.info {
+    width: 100%;
+    overflow: hidden;
+    display: block;
+    margin: 0 auto;
+    background: #F5F5F5;
+    min-height: 456px;
+    padding-top: 60px;
+}
+
+.info .lt {
+    width: 50%;
+    float: left;
+}
+
+.info .rt {
+    width: 50%;
+    float: right;
+}
+
+.info .info_title {
+    width: 80%;
+    overflow: hidden;
+    float: left;
+    border-bottom: 1px solid #13BEA8;
+    padding-bottom: 10px;
+}
+
+.rt .info_title {
+    float: right;
+}
+
+.info_title h5 {
+    float: left;
+    font-size: 24px;
+    color: #000000;
+}
+
+.info_title a {
+    line-height: 30px;
+    float: right;
+    font-size: 14px;
+    color: #999999;
+}
+
+.info ul {
+    width: 80%;
+    overflow: hidden;
+    display: block;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+.info li {
+    width: 100%;
+    overflow: hidden;
+    display: block;
+    margin: 0 auto;
+    height: 54px;
+    line-height: 54px;
+    border-bottom: 1px dotted #CECECE;
+}
+
+.info .lt ul {
+    float: left;
+}
+
+.info .rt ul {
+    float: right;
+}
+
+.info li a {
+    width: 100%;
+    overflow: hidden;
+    display: block;
+    margin: 0 auto;
+    color: #000000;
+    font-size: 14px;
+}
+
+.info a em {
+    float: right;
+}
+
+
+/*响应式调整*/
+@media only screen and (max-width: 414px) {
+    .part h3 em {
+        font-size: 24px !important;
+    }
+
+    .item2 em img {
+        top: -7px;
+    }
+
+    .part s {
+        font-size: 15px;
+        margin-bottom: 18px;
+    }
+    .part h3 {
+        font-size: 22px;
+    }
+
+    .part i {
+        margin-top: 10px;
+        font-size: 15px;
+        margin-bottom: 20px;
+    }
+    .tip_part .rt h5 {
+        color: #333;
+    }
+    .tip_part .rt span {
+        color: #333;
+    }
+    .advantage li span em {
+        width: 100%;
+        overflow: hidden;
+        display: block;
+        margin: 0 auto;
+        line-height: 16px;
+        margin-bottom: 10px;
+        font-size: 12px;
+    }
+
+    #carousel-example-generic {
+        height: auto;
+        background: url(../image/phone_bk.png) top center no-repeat;
+    }
+    .item .part {
+        margin-top: 90px;
+    }
+    .carousel-inner {
+        height: 346px;
+    }
+
+    .carousel-indicators {
+        bottom: 368px !important;
+    }
+    .part i {
+        font-size: 12px;
+    }
+    .tip_part {
+        background: #fff;
+        height: 440px;
+    }
+    .tip_part li:nth-child(5) {
+        border: none;
+    }
+
+    .tip_part li {
+        width: 100%;
+
+        overflow: hidden;
+        display: block;
+        margin: 0 auto;
+        color: #333;
+        border: none;
+        border-bottom: 1px solid #ccc;
+    }
+    .tip_part li a {
+        width: 100%;
+        overflow: hidden;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .tip_part li .lt {
+        margin-top: 10px;
+    }
+
+    .tip_part li .rt {
+        width: 80%;
+        margin-top: 10px;
+    }
+
+    .advantage ul li {
+        width: 50%;
+        height: 280px;
+        margin-bottom: 10px;
+        overflow: hidden;
+    }
+
+    .advantage li span {
+        height: auto;
+    }
+
+    .advantage li a {
+        height: 100%;
+    }
+
+    .cube {
+        height: auto;
+        padding-bottom: 20px;
+    }
+
+    .cube_logo_icon {
+        width: 50%;
+        overflow: hidden;
+        display: block;
+        margin: 20px auto;
+        float: none;
+    }
+
+    .cube .rt {
+        width: 100%;
+        overflow: hidden;
+        display: block;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .cube button {
+        display: none;
+    }
+
+
+
+    .sel_phone {
+        width: 100%;
+        overflow: hidden;
+        display: block;
+        margin: 0 auto;
+        border-top: 1px solid #E6E6E6;
+        margin-top: 10px;
+    }
+
+    .sel_phone li {
+        padding-top: 20px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #E6E6E6;
+    }
+
+    .sel_phone .cur_li {
+        width: 100%;
+        overflow: hidden;
+        display: block;
+        margin: 0 auto;
+        background: #fff;
+        padding-bottom: 10px;
+    }
+
+    .sel_phone .cur_li em {
+        color: #000000;
+        font-size: 16px;
+        float: left;
+        margin-right: 10px;
+    }
+
+    .sel_phone .cur_li span {
+        font-size: 14px;
+        color: #777777;
+    }
+
+    .cur_show {
+        width: 100%;
+        overflow: hidden;
+        display: none;
+        margin: 0 auto;
+        padding: 20px 10px;
+        background: #F5F5F5;
+        color: #777777;
+        font-size: 14px;
+        line-height: 20px;
+    }
+    .title span {
+        font-size: 12px;
+        margin-bottom: 30px;
+    }
+    .sel_phone .active em {
+        color: #009292;
+    }
+    .sel_phone .active .cur_show {
+        display: block;
+    }
+    .info .lt , .info .rt {
+        width: 48%;
+    }
+    .case {
+        padding-bottom: 2px;
+    }
+    .info {
+        min-height: auto;
+        padding-bottom: 40px;
+        background: #fff;
+    }
+    .info a {
+        width: 100%;
+        overflow: hidden;
+        display: block;
+        margin: 0 auto;
+        overflow: hidden;
+    }
+    .info a img {
+        width: 100%;
+        overflow: hidden;
+        display: block;
+        margin: 0 auto;
+    }
+    .cube .rt h5 {
+        font-size: 24px;
+    }
+    .cube .rt span {
+        font-size: 20px;
+    }
+    .cube .rt s {
+        font-size: 14px;
+    }
+    .advantage {
+        padding-top: 34px;
+        padding-bottom: 34px;
+    }
+    .advantage ul {
+        margin-top: 30px;
+    }
+}
