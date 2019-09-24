@@ -1,0 +1,51 @@
+.cur_banner {
+    background: -webkit-linear-gradient(left,  #fec853 ,#d94d51); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(right,  #fec853, #d94d51); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(right,  #fec853, #d94d51); /* Firefox 3.6 - 15 */
+    background: linear-gradient(to right,  #fec853 , #d94d51); /* 标准的语法 */
+}
+.cur_banner .container {
+    margin-top: 150px;
+    color: #fff;
+}
+.cur_banner .lt_1 {
+    font-size: 32px;
+    line-height: 40px;
+    text-space: 5px;
+}
+.cur_banner .lt_1 h5 {
+    width: 100%;
+    overflow: hidden;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 15px;
+}
+.list {
+    width: 100%;
+    overflow: hidden;
+    display: block;
+    margin: 0 auto;
+    padding: 40px 0px;
+}
+.list .title h5 {
+    width: 100%;
+    overflow: hidden;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+.list .title span {
+    width: 100%;
+    overflow: hidden;
+    display: block;
+    margin: 0 auto;
+
+
+
+    text-align: center;
+    font-size: 16px;
+    margin-bottom: 15px;
+    color: #ccc;
+}

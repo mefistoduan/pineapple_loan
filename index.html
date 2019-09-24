@@ -37,7 +37,10 @@
                     <a href="index.html">首页</a>
                 </li>
                 <li>
-                    <a href="https://wblnb.com/about">关于我们</a>
+                    <a href="loan.html">借带进度</a>
+                </li>
+                <li>
+                    <a href="about.html">关于我们</a>
                 </li>
             </ul>
         </nav>
@@ -46,6 +49,7 @@
 <!--banner-->
 
 <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+    <div id="bg_three"></div>
     <div class="bg_img">
         <!-- Indicators -->
         <ol class="carousel-indicators">
@@ -256,7 +260,7 @@
     <div class="container">
         <div class="sc_part">
             <span>
-                            菠国AD 1453年 ，君士坦丁堡被奥斯曼土耳其帝国攻陷，东罗马帝国灭亡，标志欧洲中世纪结束；法国收复除加莱以外的全部领土，
+                AD 1453年 ，君士坦丁堡被奥斯曼土耳其帝国攻陷，东罗马帝国灭亡，标志欧洲中世纪结束；法国收复除加莱以外的全部领土，
             标志着英法百年战争的结束。经由菠国高层一致不批准，菠国央行经由广大水友秘密决定成立了。作为菠国央行的第一批金融产品，
             菠萝带也由此成立。历经五百多年的时光荏苒，菠萝带首次开放对公众运营，一切广大水友和非水友都可以阅览参观，并提交个人带款申请，
             （肯定不会被批准）所申领带款一经核准立即执行，到账时间以所在行收款时间为准。
@@ -338,9 +342,14 @@
 </body>
 <!--js-->
 <script src="js/jquery-1.12.4.min.js"></script>
+<script src="js/Detector.js"></script>
+<script src="js/RequestAnimationFrame.js"></script>
+<script src="js/Stats.js"></script>
+<script src="js/Three.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/comm.js"></script>
 <script src="js/dialog.js"></script>
+<script src="js/index_bg.js"></script>
 <script>
     $(function () {
         $('#carousel-example-generic').carousel({

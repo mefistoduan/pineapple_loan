@@ -7,6 +7,8 @@
     background: linear-gradient(to right,  #fec853 , #d94d51); /* 标准的语法 */
 }
 #carousel-example-generic .bg_img {
+    position: absolute;
+    top: 0;
     width: 100%;
     overflow: hidden;
     display: block;
@@ -14,7 +16,7 @@
 }
 
 .carousel-indicators {
-    bottom: 120px !important;
+    bottom: 145px !important;
 }
 
 .carousel-indicators li {
@@ -92,16 +94,16 @@
     overflow: hidden;
     display: block;
     margin: 0 auto;
-    border: 1px solid #d94d51;
+    border: 1px solid #fec853;
     text-align: center;
     line-height: 46px;
     font-size: 16px;
-    color: #d94d51;
+    color: #fec853;
     background: none;
 }
 
 .part button:hover {
-    background: #d94d51;
+    background: #fec853;
     color: #fff;
 }
 
@@ -383,7 +385,7 @@
     font-size: 18px;
     line-height: 40px;
     text-decoration: none;
-    color: #333;
+    color: #000;
 }
 
 .cube .rt img {

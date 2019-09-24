@@ -1,0 +1,136 @@
+.cur_banner {
+    background: -webkit-linear-gradient(left,  #fec853 ,#d94d51); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(right,  #fec853, #d94d51); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(right,  #fec853, #d94d51); /* Firefox 3.6 - 15 */
+    background: linear-gradient(to right,  #fec853 , #d94d51); /* 标准的语法 */
+}
+.cur_banner .container {
+    margin-top: 150px;
+    color: #fff;
+}
+.cur_banner .lt_1 {
+    font-size: 32px;
+    line-height: 40px;
+    text-space: 5px;
+}
+.cur_banner .lt_1 h5 {
+    width: 100%;
+    overflow: hidden;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 15px;
+}
+.title {
+    width: 100%;
+    overflow: hidden;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.title h4 {
+    width: 100%;
+    overflow: hidden;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    font-size: 28px;
+    color: #000000;
+}
+
+.title span {
+    width: 100%;
+    overflow: hidden;
+    display: block;
+    margin: 0 auto;
+    color: #999999;
+    font-size: 18px;
+}
+.about {
+    width: 100%;
+    overflow: hidden;
+    display: block;
+    margin: 0 auto;
+    padding-top: 80px;
+    padding-bottom: 60px;
+}
+.about .container {
+    margin-top: 60px;
+    background: #F5F5F5;
+    padding: 55px 70px;
+}
+.about .sub {
+    width: 210px;
+    overflow: hidden;
+    float: left;
+    border-bottom: 1px solid #d94d51;
+    margin-bottom: 25px;
+}
+.sub h5 {
+    width: 100%;
+    overflow: hidden;
+    display: block;
+    margin: 0 auto;
+    font-weight: bold;
+    font-size: 20px;
+    color: #d94d51;
+}
+.sub span {
+    width: 100%;
+    overflow: hidden;
+    display: block;
+    margin: 0 auto;
+    color: #CCCCCC;
+    margin-top: 10px;
+    padding-bottom: 10px;
+
+}
+.text p {
+    width: 100%;
+    overflow: hidden;
+    display: block;
+    margin: 0 auto;
+    color: #000000;
+    font-size: 14px;
+    line-height: 29px;
+}
+/*å“åº”å¼è°ƒæ•´*/
+@media only screen and (max-width: 414px) {
+
+    .cur_banner .lt H5 {
+        text-align: center;
+    }
+    .cur_banner em {
+        width: 100%;
+        overflow: hidden;
+        display: block;
+        margin: 0 auto;
+        text-align: center;
+    }
+    .more_tab.cur_tab li {
+        width: 87px!important;
+        height: 40px;
+        line-height: 40px;
+        margin-bottom: 5px;
+    }
+    .cur_banner .lt span {
+        text-align: center;
+    }
+    .cur_banner .rt img {
+        width: 148px;
+    }
+    .about {
+        padding-top: 1px;
+        padding-bottom: 10px;
+    }
+    .title h4 {
+        font-size: 18px;
+    }
+    .title span {
+        font-size: 14px;
+    }
+    .about .container {
+        margin-top: 40px;
+        padding: 20px 10px;
+    }
+}

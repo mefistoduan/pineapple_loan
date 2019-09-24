@@ -318,7 +318,6 @@ header .container {
     display: block;
     margin: 0 auto;
     height: 400px;
-    background: url("../image/state.png")top center no-repeat;
 }
 .cur_banner em {
     font-size: 28px;
