@@ -8,7 +8,7 @@
     padding-bottom: 10px;
 }
 .navbar-static-top .navbar-header a em {
-    color: #00B1D1;
+    color: #d94d51;
     font-size: 18px;
     float: left;
     margin-right: 10px;
@@ -26,7 +26,7 @@
 
 .navbar-static-top {
     background: rgba(88, 88, 88,0.3);
-    border-bottom: 1px solid #7CC4D2;
+    border-bottom: 1px solid #d94d51;
 }
 
 .navbar-brand > img {
@@ -59,27 +59,27 @@
     margin-top: 10px;
 }
 .bw_navbar li:visited {
-    background: #00AC96;
+    background: #d94d51;
 }
 .bw_navbar li a:hover {
-    background: #00AC96;
+    background: #d94d51;
     border-radius: 250px;
 }
 .bw_navbar li.active a{
-    background: #00AC96;
+    background: #d94d51;
     border-radius: 250px;
     padding-left: 25px;
     padding-right: 25px;
 }
 .bw_navbar li.active a:visited {
-    background: #00AC96;
+    background: #d94d51;
 }
 .bw_navbar li span {
     width: 71px;
     height: 27px;
     line-height: 24px;
     color: #fff;
-    background: #00B1D1;
+    background: #d94d51;
     text-align: center;
     font-size: 12px;
     overflow: hidden;
@@ -125,7 +125,7 @@ header .container {
 .carousel-indicators li.active {
     width: 40px;
     height: 3px;
-    background: #00B1D1;
+    background: #d94d51;
     border: none;
 }
 
@@ -134,7 +134,7 @@ header .container {
     overflow: visible;
     display: block;
     margin: 0 auto;
-    background: #009590;
+    background: #d94d51;
     color: #fff;
     text-align: center;
     padding-top: 17px;
@@ -156,14 +156,14 @@ header .container {
     height: 180px;
 }
 .footer ul {
-    width: 380px;
+    width: 100px;
     overflow: hidden;
     display: block;
     margin: 0 auto;
     margin-top: 40px;
 }
 .footer ul li {
-    width: 33%;
+    width: 100%;
     float: left;
 }
 .footer li img {
@@ -237,7 +237,7 @@ header .container {
     height: 120px;
     float: left;
     background: #fff;
-    border: 1px solid #00B1D1;
+    border: 1px solid #d94d51;
     border-right: 0;
     display: none;
 }
@@ -245,10 +245,10 @@ header .container {
     width: 40px;
     height: 120px;
     float: right;
-    background: #00B1D1;
+    background: #d94d51;
     color: #FFF;
     cursor: pointer;
-    border: 1px solid #00B1D1;
+    border: 1px solid #d94d51;
 }
 .contact_part .rt img {
     width: 33px;
@@ -295,7 +295,7 @@ header .container {
     overflow: hidden;
     display: block;
     margin: 0 auto;
-    color: #00B1D1;
+    color: #d94d51;
     font-size: 16px;
     text-align: center;
     margin-top: 8px;
@@ -365,10 +365,10 @@ header .container {
     overflow: hidden;
     display: block;
     margin: 0 auto;
-    border-top: 1px solid #5EB9B9;
+    border-top: 1px solid #d94d51;
     height: 50px;
     line-height: 50px;
-    background: #009590;
+    background: #d94d51;
     color: #fff;
 }
 .cur_tab ul {
@@ -401,10 +401,10 @@ header .container {
     margin: 0 auto;
     height: 110px;
     line-height: 110px;
-    background: -webkit-linear-gradient(left,  #1AB19D ,#005E84); /* Safari 5.1 - 6.0 */
-    background: -o-linear-gradient(right,  #1AB19D, #005E84); /* Opera 11.1 - 12.0 */
-    background: -moz-linear-gradient(right,  #1AB19D, #005E84); /* Firefox 3.6 - 15 */
-    background: linear-gradient(to right,  #1AB19D , #005E84); /* 标准的语法 */
+    background: -webkit-linear-gradient(left,  #fec853 ,#d94d51); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(right,  #fec853, #d94d51); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(right,  #fec853, #d94d51); /* Firefox 3.6 - 15 */
+    background: linear-gradient(to right,  #fec853 , #d94d51); /* 标准的语法 */
 }
 .bottom_mofang .container {
     width: 960px;
@@ -445,93 +445,7 @@ header .container {
     background: #00D9D3;
     color: #fff;
 }
-/*modal*/
 .modal {
-    width: 100%;
-    overflow: hidden;
-    display: block;
-    margin: 0 auto;
-    border-radius: 5px;
-}
-.modal .main_modal {
-    width: 100%;
-    overflow: hidden;
-    display: block;
-    margin: 0 auto;
-    height: 359px;
-    background: -webkit-linear-gradient(left,  #1AB19D ,#005E84); /* Safari 5.1 - 6.0 */
-    background: -o-linear-gradient(right,  #1AB19D, #005E84); /* Opera 11.1 - 12.0 */
-    background: -moz-linear-gradient(right,  #1AB19D, #005E84); /* Firefox 3.6 - 15 */
-    background: linear-gradient(to right,  #1AB19D , #005E84); /* 标准的语法 */
-}
-.modal .close_modal {
-    position: relative;
-    right: 20px;
-    top: 20px;
-    width: 40px;
-    height: 40px;
-    float: right;
-    background: url("../image/close.png")top center no-repeat;
-    background-size: 100%;
-    cursor: pointer;
-}
-.modal .main_modal h5 {
-    width: 100%;
-    overflow: hidden;
-    display: block;
-    margin: 0 auto;
-    font-size: 30px;
-    text-align: center;
-    color: #fff;
-    margin-bottom: 10px;
-}
-.modal .main_modal span {
-    width: 100%;
-    overflow: hidden;
-    display: block;
-    margin: 0 auto;
-    text-align: center;
-    color: #fff;
-    margin-bottom: 20px;
-}
-.modal .main_modal img {
-    width: 152px;
-    overflow: hidden;
-    display: block;
-    margin: 0 auto;
-    margin-bottom: 20px;
-}
-.modal .main_modal s {
-    width: 100%;
-    overflow: hidden;
-    display: block;
-    margin: 0 auto;
-    text-align: center;
-    color: #fff;
-    font-size: 22px;
-    text-decoration: none;
-}
-.modal button {
-    width: 260px;
-    height: 60px;
-    overflow: hidden;
-    border: 2px solid #009292;
-    text-align: center;
-    line-height: 60px;
-    font-size: 16px;
-    color: #009292;
-    display: block;
-    margin: 0 auto;
-    background: none;
-    margin-top: 30px;
-    border-radius: 250px;
-}
-.modal button:hover {
-    color: #fff;
-    border: 2px solid #fff;
-    background: #009292;
-}
-.phone_show {
     display: none;
 }
 /*响应式调整*/
@@ -565,7 +479,7 @@ header .container {
         background: #000000;
     }
     .bw_navbar li:nth-child(1){
-        background: #009292;
+        background: #fec853;
     }
     .bw_navbar li.active a {
         background: none;
@@ -633,7 +547,7 @@ header .container {
         display: none;
     }
     .cur_tab li.active, .cur_tab li:hover {
-        background: #007264;
+        background: #fec853;
     }
 
 }

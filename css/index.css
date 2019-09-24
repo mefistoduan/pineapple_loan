@@ -1,17 +1,16 @@
 #carousel-example-generic {
     height: 640px;
     overflow: hidden;
-    background: -webkit-linear-gradient(left,  #1AB19D ,#005E84); /* Safari 5.1 - 6.0 */
-    background: -o-linear-gradient(right,  #1AB19D, #005E84); /* Opera 11.1 - 12.0 */
-    background: -moz-linear-gradient(right,  #1AB19D, #005E84); /* Firefox 3.6 - 15 */
-    background: linear-gradient(to right,  #1AB19D , #005E84); /* 标准的语法 */
+    background: -webkit-linear-gradient(left,  #fec853 ,#d94d51); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(right,  #fec853, #d94d51); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(right,  #fec853, #d94d51); /* Firefox 3.6 - 15 */
+    background: linear-gradient(to right,  #fec853 , #d94d51); /* 标准的语法 */
 }
 #carousel-example-generic .bg_img {
     width: 100%;
     overflow: hidden;
     display: block;
     margin: 0 auto;
-    background: url("../image/bg.png") top center no-repeat;
 }
 
 .carousel-indicators {
@@ -93,16 +92,16 @@
     overflow: hidden;
     display: block;
     margin: 0 auto;
-    border: 1px solid #35BCB8;
+    border: 1px solid #d94d51;
     text-align: center;
     line-height: 46px;
     font-size: 16px;
-    color: #00D9D3;
+    color: #d94d51;
     background: none;
 }
 
 .part button:hover {
-    background: #00D9D3;
+    background: #d94d51;
     color: #fff;
 }
 
@@ -126,8 +125,8 @@
     margin: 0 auto;
     height: 120px;
     margin-top: 20px;
-    background: #009590;
-    border-top: 1px solid #7CC4D2;
+    background: #d94d51;
+    border-top: 1px solid #d94d51;
 }
 
 .tip_part li {
@@ -135,7 +134,7 @@
     float: left;
     padding-bottom: 20px;
     margin-top: 25px;
-    border-left: 1px solid #00a29a;
+    border-left: 1px solid #fec853;
     padding-left: 12px;
     font-size: 14px;
     color: #fff;
@@ -145,7 +144,7 @@
     color: #00FFDD;
 }
 .tip_part li:nth-child(5) {
-    border-right: 1px solid #00a29a;
+    border-right: 1px solid #fec853;
 }
 
 .tip_part li .lt {
@@ -163,8 +162,8 @@
     width: 44px;
     height: 44px;
     margin: 0 auto;
-    background: #009494;
-    border: 1px solid #3EE9E9;
+    background: #fec853;
+    border: 1px solid #fec853;
     text-align: center;
     line-height: 44px;
     font-size: 22px;
@@ -269,10 +268,10 @@
     text-align: center;
 }
 .advantage li.active a {
-    border-bottom: 4px solid #1AB19D;
+    border-bottom: 4px solid #fec853;
 }
 .advantage li a:hover {
-    border-bottom: 4px solid #1AB19D;
+    border-bottom: 4px solid #fec853;
 }
 .advantage li a em {
     margin-right: 20px;
@@ -305,18 +304,42 @@
     font-size: 14px;
     color: #777777;
     height: 30px;
-    text-align:left;
+    text-align:center;
 }
 
 .cube {
+    position: relative;
     width: 100%;
     overflow: hidden;
     display: block;
     margin: 0 auto;
-    background: url("../image/black.png") top center no-repeat;
     height: 550px;
 }
-
+.cube_bg {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    -webkit-filter: blur(9px);
+    -moz-filter: blur(9px);
+    -o-filter: blur(9px);
+    -ms-filter: blur(9px);
+    filter:blur(9px);
+    background: url("../image/header.png") top center repeat;
+    background-size: 100%;
+}
+.cube .container {
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    z-index: 10;
+}
 .cube_logo_icon {
     width: 263px;
     overflow: hidden;
@@ -360,6 +383,7 @@
     font-size: 18px;
     line-height: 40px;
     text-decoration: none;
+    color: #333;
 }
 
 .cube .rt img {
@@ -374,7 +398,7 @@
     color: #fff;
     line-height: 52px;
     overflow: hidden;
-    background: #009783;
+    background: #d94d51;
     text-align: center;
     font-size: 18px;
     border: none;
@@ -384,7 +408,7 @@
 }
 
 .cube button:hover {
-    background: #00C9AF;
+    background: #fec853;
 }
 
 .case {
@@ -427,15 +451,15 @@
     display: block;
     margin: 0 auto;
     height: 80px;
-    background: #13BEA8;
+    background: #fec853;
     color: #fff;
-    border-bottom: 1px solid #00CEB3;
+    border-bottom: 1px solid #fec853;
 }
 .sel .lt li.active {
-    background: #008877;
+    background: #fec853;
 }
 .sel .lt li:hover {
-    background: #008877;
+    background: #fec853;
 }
 
 .sel .lt li span {
@@ -458,14 +482,48 @@
     font-size: 12px;
     color: rgba(255, 255, 255, 0.4);
     text-align: center;
-    border-bottom: 1px solid #00CEB3;
+    border-bottom: 1px solid #fec853;
     padding-bottom: 25px;
 }
 
 .sel .lt li:hover em {
     color: #fff;
 }
-
+.scope {
+    width: 100%;
+    overflow: hidden;
+    display: block;
+    margin: 0 auto;
+    background: #F5F5F5;
+    padding-top: 80px;
+    padding-bottom: 20px;
+}
+.scope .title {
+    margin-bottom: 50px;
+}
+.scope .sc_part {
+    width: 100%;
+    overflow: hidden;
+    display: block;
+    margin: 0 auto;
+    padding: 40px;
+    background: #fff;
+    margin-bottom: 10px;
+    line-height: 30px;
+}
+.sc_part img {
+    width: 300px;
+    overflow: hidden;
+    display: block;
+    margin: 0 auto;
+}
+.sc_part h5 {
+    width: 100%;
+    overflow: hidden;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+}
 .sel .rt ul {
     width: 100%;
     height: 480px;
@@ -584,7 +642,7 @@
     width: 80%;
     overflow: hidden;
     float: left;
-    border-bottom: 1px solid #13BEA8;
+    border-bottom: 1px solid #fec853;
     padding-bottom: 10px;
 }
 
@@ -674,7 +732,7 @@
     .tip_part .rt span {
         color: #333;
     }
-    .advantage li span em {
+    .advantage li span  {
         width: 100%;
         overflow: hidden;
         display: block;
@@ -682,6 +740,7 @@
         line-height: 16px;
         margin-bottom: 10px;
         font-size: 12px;
+        text-align: center;
     }
 
     #carousel-example-generic {
@@ -742,9 +801,6 @@
         overflow: hidden;
     }
 
-    .advantage li span {
-        height: auto;
-    }
 
     .advantage li a {
         height: 100%;

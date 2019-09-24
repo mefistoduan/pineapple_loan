@@ -1,7 +1,5 @@
 $(function () {
 
-
-
     $('.sel .lt li').hover(function (e) {
         $('.sel .lt li').removeClass('active');
         $(this).addClass('active');
@@ -15,13 +13,10 @@ $(function () {
         $(this).addClass('active');
     });
 
-    // 点击下载弹窗
-    $('#cur_download').click(function () {
-        curModal();
-    });
-
     $('.btn_download').click(function () {
-        curModal();
+        // curModal();
+        console.log(123);
+        $('.modal').modal('show');
     });
 
     //  底部 点击下载弹窗
