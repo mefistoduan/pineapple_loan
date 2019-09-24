@@ -1,4 +1,4 @@
-var size = 1, res = 60, sizeres = size * res, halfsizeres = sizeres / 2;
+var size = 10, res = 60, sizeres = size * res, halfsizeres = sizeres / 2;
 var buffer1 = [], buffer2 = [], temp;
 var grid = [], plane;
 var scene, camera, light, renderer;
