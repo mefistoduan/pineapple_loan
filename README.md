@@ -23,4 +23,6 @@ a test website for pineapple_loan,just a meme.Don’t look so grim.
 <small>ps:CGNB</small>
 
 ###
-1.首页动画加 白给 字样
+<s>1.首页动画加 白给 字样</s>
+
+参考 ：https://www.zcool.com.cn/work/ZMjI5MzIxODg=.html

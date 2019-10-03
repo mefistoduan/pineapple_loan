@@ -1,11 +1,12 @@
 #carousel-example-generic {
     height: 640px;
     overflow: hidden;
-    background: -webkit-linear-gradient(left,  #fec853 ,#d94d51); /* Safari 5.1 - 6.0 */
-    background: -o-linear-gradient(right,  #fec853, #d94d51); /* Opera 11.1 - 12.0 */
-    background: -moz-linear-gradient(right,  #fec853, #d94d51); /* Firefox 3.6 - 15 */
-    background: linear-gradient(to right,  #fec853 , #d94d51); /* 标准的语法 */
+    background: -webkit-linear-gradient(left, #fec853, #d94d51); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(right, #fec853, #d94d51); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(right, #fec853, #d94d51); /* Firefox 3.6 - 15 */
+    background: linear-gradient(to right, #fec853, #d94d51); /* 标准的语法 */
 }
+
 #carousel-example-generic .bg_img {
     position: absolute;
     top: 0;
@@ -142,9 +143,11 @@
     color: #fff;
     cursor: pointer;
 }
+
 .tip_part li:hover h5 {
     color: #00FFDD;
 }
+
 .tip_part li:nth-child(5) {
     border-right: 1px solid #fec853;
 }
@@ -269,12 +272,15 @@
     color: #000000;
     text-align: center;
 }
+
 .advantage li.active a {
     border-bottom: 4px solid #fec853;
 }
+
 .advantage li a:hover {
     border-bottom: 4px solid #fec853;
 }
+
 .advantage li a em {
     margin-right: 20px;
 }
@@ -306,7 +312,7 @@
     font-size: 14px;
     color: #777777;
     height: 30px;
-    text-align:center;
+    text-align: center;
 }
 
 .cube {
@@ -317,6 +323,7 @@
     margin: 0 auto;
     height: 550px;
 }
+
 .cube_bg {
     width: 100%;
     height: 100%;
@@ -329,10 +336,11 @@
     -moz-filter: blur(9px);
     -o-filter: blur(9px);
     -ms-filter: blur(9px);
-    filter:blur(9px);
+    filter: blur(9px);
     background: url("../image/header.png") top center repeat;
     background-size: 100%;
 }
+
 .cube .container {
     height: 100%;
     top: 0;
@@ -342,6 +350,7 @@
     position: absolute;
     z-index: 10;
 }
+
 .cube_logo_icon {
     width: 263px;
     overflow: hidden;
@@ -457,9 +466,11 @@
     color: #fff;
     border-bottom: 1px solid #fec853;
 }
+
 .sel .lt li.active {
     background: #fec853;
 }
+
 .sel .lt li:hover {
     background: #fec853;
 }
@@ -491,6 +502,7 @@
 .sel .lt li:hover em {
     color: #fff;
 }
+
 .scope {
     width: 100%;
     overflow: hidden;
@@ -500,9 +512,11 @@
     padding-top: 80px;
     padding-bottom: 20px;
 }
+
 .scope .title {
     margin-bottom: 50px;
 }
+
 .scope .sc_part {
     width: 100%;
     overflow: hidden;
@@ -513,12 +527,14 @@
     margin-bottom: 10px;
     line-height: 30px;
 }
+
 .sc_part img {
     width: 300px;
     overflow: hidden;
     display: block;
     margin: 0 auto;
 }
+
 .sc_part h5 {
     width: 100%;
     overflow: hidden;
@@ -526,6 +542,7 @@
     margin: 0 auto;
     text-align: center;
 }
+
 .sel .rt ul {
     width: 100%;
     height: 480px;
@@ -573,9 +590,11 @@
     background: url("../image/cb6.png") top center no-repeat;
     background-size: 100% 100%;
 }
+
 .sel .rt li img {
     margin-left: 15px;
 }
+
 .sel .rt li h5 {
     width: 100%;
     overflow: hidden;
@@ -703,7 +722,65 @@
 .info a em {
     float: right;
 }
+.explain {
+    width: 920px;
+    overflow: hidden;
+    display: block;
+    margin: 0 auto;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+.explain>h5 {
+    width: 100%;
+    overflow: hidden;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 28px;
+    color: #d94d51;
+}
+}
 
+.sub {
+    width: 210px;
+    overflow: hidden;
+    float: left;
+    border-bottom: 1px solid #d94d51;
+    margin-bottom: 25px;
+}
+
+.sub h5 {
+    width: 100%;
+    overflow: hidden;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    font-weight: normal;
+    font-size: 18px;
+    color: #000;
+}
+
+.sub span {
+    width: 100%;
+    overflow: hidden;
+    display: block;
+    margin: 0 auto;
+    color: #CCCCCC;
+    margin-top: 10px;
+    padding-bottom: 10px;
+
+}
+
+.text p {
+    width: 100%;
+    overflow: hidden;
+    display: block;
+    margin: 0 auto;
+    color: #999;
+    font-size: 16px;
+    line-height: 29px;
+}
 
 /*响应式调整*/
 @media only screen and (max-width: 414px) {
@@ -719,6 +796,7 @@
         font-size: 15px;
         margin-bottom: 18px;
     }
+
     .part h3 {
         font-size: 22px;
     }
@@ -728,13 +806,16 @@
         font-size: 15px;
         margin-bottom: 20px;
     }
+
     .tip_part .rt h5 {
         color: #333;
     }
+
     .tip_part .rt span {
         color: #333;
     }
-    .advantage li span  {
+
+    .advantage li span {
         width: 100%;
         overflow: hidden;
         display: block;
@@ -749,9 +830,11 @@
         height: auto;
         background: url(../image/phone_bk.png) top center no-repeat;
     }
+
     .item .part {
         margin-top: 90px;
     }
+
     .carousel-inner {
         height: 346px;
     }
@@ -759,13 +842,16 @@
     .carousel-indicators {
         bottom: 368px !important;
     }
+
     .part i {
         font-size: 12px;
     }
+
     .tip_part {
         background: #fff;
         height: 440px;
     }
+
     .tip_part li:nth-child(5) {
         border: none;
     }
@@ -780,6 +866,7 @@
         border: none;
         border-bottom: 1px solid #ccc;
     }
+
     .tip_part li a {
         width: 100%;
         overflow: hidden;
@@ -834,7 +921,6 @@
     }
 
 
-
     .sel_phone {
         width: 100%;
         overflow: hidden;
@@ -882,27 +968,34 @@
         font-size: 14px;
         line-height: 20px;
     }
+
     .title span {
         font-size: 12px;
         margin-bottom: 30px;
     }
+
     .sel_phone .active em {
         color: #009292;
     }
+
     .sel_phone .active .cur_show {
         display: block;
     }
-    .info .lt , .info .rt {
+
+    .info .lt, .info .rt {
         width: 48%;
     }
+
     .case {
         padding-bottom: 2px;
     }
+
     .info {
         min-height: auto;
         padding-bottom: 40px;
         background: #fff;
     }
+
     .info a {
         width: 100%;
         overflow: hidden;
@@ -910,25 +1003,31 @@
         margin: 0 auto;
         overflow: hidden;
     }
+
     .info a img {
         width: 100%;
         overflow: hidden;
         display: block;
         margin: 0 auto;
     }
+
     .cube .rt h5 {
         font-size: 24px;
     }
+
     .cube .rt span {
         font-size: 20px;
     }
+
     .cube .rt s {
         font-size: 14px;
     }
+
     .advantage {
         padding-top: 34px;
         padding-bottom: 34px;
     }
+
     .advantage ul {
         margin-top: 30px;
     }

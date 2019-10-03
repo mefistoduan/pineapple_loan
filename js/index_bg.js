@@ -23,9 +23,9 @@ function init() {
     scene = new THREE.Scene();
 
     camera = new THREE.PerspectiveCamera(50, window.innerWidth / window.innerHeight, 1, 2000);
-    camera.position.x = 100 + sizeres;
-    camera.position.y = 200;
-    camera.position.z = 100 + sizeres;
+    camera.position.x = 80 + sizeres;
+    camera.position.y = 600;
+    camera.position.z = 20 + sizeres;
     camera.lookAt(new THREE.Vector3(halfsizeres, -50, halfsizeres));
     scene.add(camera);
 
@@ -97,6 +97,7 @@ function onDocumentMouseMove(event) {
     ray.direction.subSelf(camera.position).normalize();
 
     intersects = ray.intersectObject(plane);
+    console.log(intersects);
 
 }
 
