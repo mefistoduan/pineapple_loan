@@ -97,7 +97,6 @@ function onDocumentMouseMove(event) {
     ray.direction.subSelf(camera.position).normalize();
 
     intersects = ray.intersectObject(plane);
-    console.log(intersects);
 
 }
 

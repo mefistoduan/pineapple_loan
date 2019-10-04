@@ -26,3 +26,98 @@ a test website for pineapple_loan,just a meme.Don’t look so grim.
 <s>1.首页动画加 白给 字样</s>
 
 参考 ：https://www.zcool.com.cn/work/ZMjI5MzIxODg=.html
+
+###
+1.身份验证部分，包括昵称，qq号（为了扩容打钱的问题）斗鱼昵称（非必填）；  
+2.申请借带页面，金额，时间，借带理由，还款计划；  
+3.进度id，查询审核进度；  
+
+###
+数据库文档
+
+
+借带人信息表
+loan_user
+
+| 字段说明 | 名称 | 数据类型  | 大小 | Null | 默认值 | 备注 |  
+| ------- | ---- | -------- | --- | ---- | ----- | ---- |   
+| 借带人id | id   | int      |     | N    |       |      |
+| 昵称     | nickname   | varchar| 20 | N |       |      |
+| qq      | qq          | varchar|  20 | N |       |      |
+| 斗鱼昵称 | douyu_nick  | varchar|  200 |  |       |      |
+
+
+借带申请表  
+loan_apply
+
+| 字段说明 | 名称 | 数据类型  | 大小 | Null | 默认值 | 备注 |  
+| ------- | ---- | -------- | --- | ---- | ----- | ---- |   
+| 借带id   | loan_id   | int |     | N    |       |      |
+| 金额   | value   | int |   999  | N    |   0  |      |
+| 还款类型   | type   | tinyint |     | N    |   0  |   0是永远不还的烂账   1是固定期限|
+| 还款时间   | paytime   | datetime |     |     |     |      |
+| 申请原因   | idea   | varchar |   250  |   N  |     |      |
+| 申请状态   | state   | tinyint |   0  |   N  |     |  0已申请1已通过2已否决3已付款4预审通过99已删除    |
+| 复核回复   | resp   | varchar |   250  |     |     |      |
+
+
+审核人信息表(todo)  
+loan_Auditor   
+
+###
+1.借带申请接口
+POST: v1/applyLoan
+Description:提交菠萝带的申请  
+Operation: * nickname,* qq,douyu_nick,*  value,type,paytime,idea
+Responses:  200
+    {
+        Result:0,  
+        Code:123456,//申请的借带id  
+        Memo:'申请已提交',  
+    }
+
+
+2.预申请审核接口
+POST: v1/applyLoan  
+Description: 审核提交的申请，只有通过后才能在 菠菠 的总审核接口看见，   
+Operation: * loan_id,* state，resp  
+Responses:  200  
+    {
+        Result:0,  
+        Memo:'预申请已完成',  
+    }
+    
+3.总申请审核接口  
+POST: v1/applyLoan  
+Description:  菠菠 审核已提交并通过已预审的申请，    
+Operation: * loan_id,* state，resp  
+Responses:  200  
+    {
+        Result:0,  
+        Code:123456,//申请的借带id  
+        Memo:'申请已提交',  
+    }
+
+4.进度查询接口  
+POST: v1/applyLoan
+Description:查询申请的申请单，默认只显示最近的100条     
+Operation: loan_id//传NULL值时为查询全部结果  
+Responses:  200  
+    {  
+        Result:0,  
+        Rs:[  
+        {  
+            nickname:' 一个孤独的借带人 ',  
+            qq: 12345678 ,//前台隐藏，后台按需显示  
+            douyu_nick:' mefisto ',  
+            loan_id:123456,  
+            value:0.01,  
+            type:2,  
+            paytime: ' 2050-01-01',  
+            idea:' 坑害河马人人有责 ',  
+            state:1,  
+            resp:' 钱太少，不配给',  
+        }
+        ]  
+        Memo:'申请已提交',  
+    }  

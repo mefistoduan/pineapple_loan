@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="css/comm.css">
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" type="text/css" href="css/all-animation.min.css"/>
+    <link rel="stylesheet" href="css/bootstrap-datepicker3.min.css">
     <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/dialog.css">
 
@@ -280,7 +281,7 @@
             <h5>什么样的用户可以来菠萝带寻求帮助?</h5>
         </div>
         <p>
-           喜欢菠萝塞冬就够了~
+            喜欢菠萝塞冬就够了~
         </p>
         <br><br>
         <div class="sub">
@@ -344,38 +345,69 @@
                 <h4 class="modal-title" id="myModalLabel">申请菠萝带</h4>
             </div>
             <div class="modal-body">
-                <h5>给菠菠一个理由，让她给你打钱</h5>
-                <br>
-                <form action="">
-                    <div class="form-group">
-                        <input type="text" class="form-control" id="exampleInputPassword1" placeholder="你的昵称">
+                <div class="page page1">
+                    <h5>身份验证</h5>
+                    <br>
+                    <form action="">
+                        <div class="form-group">
+                            <label for="ur_name" class="control-label">你的昵称（必填）:</label>
+                            <input type="text" class="form-control" id="ur_name" placeholder="写个假名糊弄一下就行">
+                        </div>
+                        <div class="form-group">
+                            <label for="ur_qq" class="control-label">你的qq号（必填）:</label>
+                            <input type="number" class="form-control" id="ur_qq" placeholder="方便菠菠被骗钱和菠菠亲自催收">
+                        </div>
+                        <div class="form-group">
+                            <label for="ur_fish" class="control-label">斗鱼昵称:</label>
+                            <input type="number" class="form-control" id="ur_fish" placeholder="开门，我们是荧光棒检察员">
+                        </div>
+                    </form>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary pull-right next_btn" >下一步</button>
                     </div>
-                    <div class="form-group">
-                        <input type="email" class="form-control" id="ur_email"  placeholder="你的邮箱">
-                    </div>
-                    <div class="form-group">
-                        <input type="number" class="form-control" id="ur_money"  placeholder="你的金额">
-                    </div>
+                </div>
+                <div class="page page2">
+                    <h5>借带申请</h5>
+                    <br>
+                    <form action="">
+                        <div class="form-group">
+                            <label for="ur_value" class="control-label">申请金额（必填）:</label>
+                            <input type="number" class="form-control" id="ur_value" placeholder="1分钱不嫌弃多100块不嫌少">
+                        </div>
+                        <div class="form-group">
+                            <label for="ur_paytype" class="control-label">预计还款类型:</label>
+                            <select name="" id="ur_paytype" class="form-control">
+                                <option value="0">靠本事骗的，凭什么还?!</option>
+                                <option value="1">让我先搪塞个日期试试</option>
+                            </select>
+                        </div>
+                        <div class="form-group date_show" id="limit_show">
+                            <label for="ur_value" class="control-label">预计还款时间:</label>
+                            <div>
+                                <span class="input-group date date-picker " id="StartTime">
+                                   <span class="input-group date date-picker" id="EndTime">
+                                        <input type="text" class="form-control form-filter input-sm" readonly
+                                               name="EndTime"
+                                               placeholder="">
+                                   </span>
+                               </span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="ur_idea" class="control-label">申请原因（必填）:</label>
+                            <textarea name="" id="ur_idea" class="form-control" cols="30" rows="3" placeholder="是时候展示你的忽悠实力了"></textarea>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary pull-right confirm_loan" data-dismiss="modal">提交</button>
+                        </div>
+                    </form>
+                </div>
 
-                    <div class="form-group">
-                        <select class="form-control" id="ur_time"  placeholder="你的期限">
-                            <option value="99">你的期限</option>
-                            <option value="1">1天</option>
-                            <option value="7">1周</option>
-                            <option value="30">1月</option>
-                            <option value="365">1年</option>
-                            <option value="0">一生</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <textarea class="form-control" rows="3" id="ur_reason"  placeholder="你的理由"></textarea>
-                    </div>
-                </form>
             </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
-                <button type="button" class="btn btn-primary" data-dismiss="modal">确定</button>
-            </div>
+            <!--<div class="modal-footer">-->
+            <!--<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>-->
+            <!--<button type="button" class="btn btn-primary" data-dismiss="modal">确定</button>-->
+            <!--</div>-->
         </div><!-- /.modal-content -->
     </div><!-- /.modal -->
 </div>
@@ -389,12 +421,8 @@
 <script src="js/bootstrap.min.js"></script>
 <script src="js/comm.js"></script>
 <script src="js/dialog.js"></script>
+<script src="js/bootstrap-datepicker.min.js"></script>
+<script src="js/bootstrap-datepicker.zh-CN.min.js"></script>
 <script src="js/index_bg.js"></script>
-<script>
-    $(function () {
-        $('#carousel-example-generic').carousel({
-            interval: 5000,
-        });
-    })
-</script>
+<script src="js/index.js"></script>
 </html>

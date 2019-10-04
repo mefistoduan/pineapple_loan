@@ -781,7 +781,44 @@
     font-size: 16px;
     line-height: 29px;
 }
-
+.modal .control-label {
+    width: 100%;
+    overflow: hidden;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 5px;
+    font-weight: normal;
+    font-size: 14px;
+    color: #333;
+}
+.modal .page {
+    width: 100%;
+    overflow: hidden;
+    display: block;
+    margin: 0 auto;
+}
+.modal .page.page1 {
+    display: block;
+}
+.modal .page.page2 {
+    display: none;
+}
+.modal .form-control {
+    background: #fff;
+    overflow: visible;
+}
+.modal select {
+    font-size: 14px;
+}
+.modal .date_show {
+    display: none;
+}
+.modal .input-group {
+    width: 100%;
+}
+.ui-popup-show {
+    z-index: 1080!important;
+}
 /*响应式调整*/
 @media only screen and (max-width: 414px) {
     .part h3 em {
