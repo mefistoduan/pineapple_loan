@@ -68,9 +68,9 @@ loan_Auditor
 1.借带申请接口
 POST: v1/applyLoan
 Description:提交菠萝带的申请  
-Operation: * nickname,* qq,douyu_nick,*  value,type,paytime,idea
-Responses:  200
-    {
+Operation: * nickname,* qq,douyu_nick,*  value,type,paytime,idea  
+Responses:  200  
+    {  
         Result:0,  
         Code:123456,//申请的借带id  
         Memo:'申请已提交',  
@@ -79,24 +79,24 @@ Responses:  200
 
 2.预申请审核接口
 POST: v1/applyLoan  
-Description: 审核提交的申请，只有通过后才能在 菠菠 的总审核接口看见，   
+Description: 审核提交的申请，只有通过后才能在 菠菠 的总审核接口看见   
 Operation: * loan_id,* state，resp  
-Responses:  200  
-    {
+Responses:  200   
+    {  
         Result:0,  
         Memo:'预申请已完成',  
-    }
+    }  
     
 3.总申请审核接口  
 POST: v1/applyLoan  
 Description:  菠菠 审核已提交并通过已预审的申请，    
 Operation: * loan_id,* state，resp  
 Responses:  200  
-    {
+    {  
         Result:0,  
         Code:123456,//申请的借带id  
         Memo:'申请已提交',  
-    }
+    }  
 
 4.进度查询接口  
 POST: v1/applyLoan
