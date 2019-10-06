@@ -60,8 +60,15 @@
         <h5>以下是已获得菠萝带授信的用户</h5>
         <span>你们成功的忽悠到了菠菠，还有什么比这更厉害的么？</span>
     </div>
+    <div class="search">
+        <div>
+            <input type="text" id="search" class="pull-left" placeholder="输入你的查询码">
+            <button class="btn search_btn">查询</button>
+        </div>
+    </div>
     <ul class="subject_list" id="content">
         <script id="test" type="text/html">
+            {{if list}}
                 {{each list as value i}}
                 <li>
                     <div class="lt">
@@ -79,7 +86,7 @@
                             <span>还款日期：{{value.paytime}}</span>
                             {{/if}}
                             {{if value.type == 1}}
-                            <span>52004 永不还钱</span>
+                            <span class="red">52004 永不还钱</span>
                             {{/if}}
                         </p>
                     </div>
@@ -93,6 +100,10 @@
                     </div>
                 </li>
                 {{/each}}
+            {{/if}}
+            {{if !list}}
+            <p>木有结果，木得感情</p>
+            {{/if}}
         </script>
 
     </ul>

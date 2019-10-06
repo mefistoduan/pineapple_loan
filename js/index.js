@@ -25,6 +25,12 @@ $(function () {
         }
     })
 
+    // 更换图形验证码
+    $('.imgvalid img').click(function () {
+        var thisSrc = '';
+        $('.imgvalid img').attr('src',thisSrc);
+    });
+
     $('.date-picker').datepicker({
         language: "zh-CN",
         autoclose: true,
@@ -46,6 +52,10 @@ $(function () {
         // checkInfo
         var ur_value = $('#ur_value').val();
         var ur_idea = $('#ur_idea').val();
+        var imgValid = $('#ur_img').val();
+        var ur_name = $('#ur_name').val();
+        var ur_qq = $('#ur_qq').val();
+        var ur_fish = $('#ur_fish').val();
         if(ur_value < 0){
             warning('倒给钱不如去直播间刷礼物咯，欧尼酱~');
             return false
@@ -62,8 +72,34 @@ $(function () {
             warning('字太多不看，200字够你发挥你的实力了啊');
             return false
         }
-
+        if(!imgValid){
+            warning('敲桌！图形验证码必填');
+            return false
+        }
+        if(imgValid.length != 4){
+            warning('敲桌！图形验证码位数不正确');
+            return false
+        }
         var code = 123456;
+        var url = '';//获取
+        var postdata = {
+            ur_value: ur_value,
+            ur_idea: ur_idea,
+            imgValid: imgValid,
+            imgValid: ur_name,
+            imgValid: ur_qq,
+            imgValid: ur_fish,
+        };
+        $.post(url, postdata, function (result) {
+            var JSON = eval('(' + result + ')');
+            if(JSON.code == 0){
+                toastr.success('修改成功','提示',opts);
+                initDatatable();
+            }else{
+                console.log(JSON);
+                toastr.warning(JSON.memo,'提示',opts);
+            }
+        });
         showCode(code);
     });
 
@@ -92,7 +128,7 @@ function nextStep() {
     // checkInfo
     var ur_name = $('#ur_name').val();
     var ur_qq = $('#ur_qq').val();
-
+    var ur_fish = $('#ur_fish').val();
     if (!ur_name) {
         warning('昵称不能为空啊，兄弟~');
         return false
@@ -110,6 +146,12 @@ function nextStep() {
         warning('乱写是骗不到菠菠的钱的?');
         $('#ur_qq').val('');
         return false
+    }
+    if (ur_fish) {
+        if(ur_fish.length > 20){
+            warning('老铁,斗鱼id有那么长嘛?');
+            return false
+        }
     }
     $('.page1').addClass('animated fadeOut')
     $('.page1').hide();

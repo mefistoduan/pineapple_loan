@@ -23,16 +23,19 @@ a test website for pineapple_loan,just a meme.Don’t look so grim.
 <small>ps:CGNB</small>
 
 ###
+
 <s>1.首页动画加 白给 字样</s>
 
 参考 ：https://www.zcool.com.cn/work/ZMjI5MzIxODg=.html
 
 ###
+
 1.身份验证部分，包括昵称，qq号（为了扩容打钱的问题）斗鱼昵称（非必填）；  
 2.申请借带页面，金额，时间，借带理由，还款计划；  
 3.进度id，查询审核进度；  
 
 ###
+
 数据库文档
 
 
@@ -65,6 +68,7 @@ loan_apply
 loan_Auditor   
 
 ###
+
 1.借带申请接口
 POST: v1/applyLoan
 Description:提交菠萝带的申请  
@@ -119,5 +123,15 @@ Responses:  200
             resp:' 钱太少，不配给',  
         }
         ]  
+        Memo:'申请已提交',  
+    }  
+5.图形验证码
+POST: v1/imgValid  
+Description:  图形验证码，防止多次提交，    
+Operation: null 
+Responses:  200  
+    {  
+        Result:0,  
+        imgRs:base64,//图片的base64  
         Memo:'申请已提交',  
     }  

@@ -116,3 +116,38 @@
     background-color: #449d44;
     border-color: #398439;
 }
+/*search*/
+.search {
+    width: 100%;
+    overflow: hidden;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+.search div {
+    width: 960px;
+    overflow: hidden;
+    display: block;
+    margin: 0 auto;
+}
+.search input {
+    width: 90%;
+    height: 35px;
+    line-height: 35px;
+    text-indent: 10px;
+    border: 1px solid #ccc;
+    border-right: 0;
+    outline: none;
+
+}
+.search .btn {
+    width: 10%;
+    border-radius: 0;
+    background: #FFBA00;
+    border: 1px solid #FFBA00;
+    outline: none;
+    color: #fff;
+}
+.red {
+    color: red!important;
+}
