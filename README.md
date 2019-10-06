@@ -69,7 +69,7 @@ loan_Auditor
 
 ###
 
-1.借带申请接口
+1.借带申请接口  
 POST: v1/applyLoan
 Description:提交菠萝带的申请  
 Operation: * nickname,* qq,douyu_nick,*  value,type,paytime,idea  
@@ -81,7 +81,7 @@ Responses:  200
     }
 
 
-2.预申请审核接口
+2.预申请审核接口  
 POST: v1/applyLoan  
 Description: 审核提交的申请，只有通过后才能在 菠菠 的总审核接口看见   
 Operation: * loan_id,* state，resp  
@@ -125,7 +125,7 @@ Responses:  200
         ]  
         Memo:'申请已提交',  
     }  
-5.图形验证码
+5.图形验证码  
 POST: v1/imgValid  
 Description:  图形验证码，防止多次提交，    
 Operation: null 
@@ -133,5 +133,5 @@ Responses:  200
     {  
         Result:0,  
         imgRs:base64,//图片的base64  
-        Memo:'申请已提交',  
+        Memo:'验证图片',  
     }  
