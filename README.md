@@ -101,7 +101,7 @@ Responses:  200
 4.进度查询接口  
 POST: v1/applyLoan
 Description:查询申请的申请单，默认只显示最近的100条     
-Operation: loan_id//传NULL值时为查询全部结果  
+Operation: loan_id,state//loan_id传NULL值时为查询全部结果  
 Responses:  200  
     {  
         Result:0,  

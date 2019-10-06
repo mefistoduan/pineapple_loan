@@ -62,7 +62,7 @@ $(function () {
             warning('字太多不看，200字够你发挥你的实力了啊');
             return false
         }
-        
+
         var code = 123456;
         showCode(code);
     });
@@ -90,27 +90,27 @@ function clear() {
 
 function nextStep() {
     // checkInfo
-    // var ur_name = $('#ur_name').val();
-    // var ur_qq = $('#ur_qq').val();
-    //
-    // if (!ur_name) {
-    //     warning('昵称不能为空啊，兄弟~');
-    //     return false
-    // }
-    // if (ur_name.length > 20) {
-    //     warning('你是打算给自己起个龙妈那么长字数的头衔么？');
-    //     $('#ur_name').val('');
-    //     return false
-    // }
-    // if (!ur_qq) {
-    //     warning('qq为空,怎么给你打钱?');
-    //     return false
-    // }
-    // if (ur_qq.length > 12 || ur_qq.length  < 6) {
-    //     warning('乱写是骗不到菠菠的钱的?');
-    //     $('#ur_qq').val('');
-    //     return false
-    // }
+    var ur_name = $('#ur_name').val();
+    var ur_qq = $('#ur_qq').val();
+
+    if (!ur_name) {
+        warning('昵称不能为空啊，兄弟~');
+        return false
+    }
+    if (ur_name.length > 20) {
+        warning('你是打算给自己起个龙妈那么长字数的头衔么？');
+        $('#ur_name').val('');
+        return false
+    }
+    if (!ur_qq) {
+        warning('qq为空,怎么给你打钱?');
+        return false
+    }
+    if (ur_qq.length > 12 || ur_qq.length  < 6) {
+        warning('乱写是骗不到菠菠的钱的?');
+        $('#ur_qq').val('');
+        return false
+    }
     $('.page1').addClass('animated fadeOut')
     $('.page1').hide();
     $('.page2').show();

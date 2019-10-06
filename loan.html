@@ -60,22 +60,41 @@
         <h5>以下是已获得菠萝带授信的用户</h5>
         <span>你们成功的忽悠到了菠菠，还有什么比这更厉害的么？</span>
     </div>
-    <ul class="subject_list">
-        <li>
-            <div class="lt">
-                <h5>【厦门】程先生车辆保险保单借款1907…</h5>
-                <p>
-                    <span>金额：6000.00元</span>
-                    <span>出借期限：12个月</span>
-                </p>
-            </div>
-            <div class="md">
+    <ul class="subject_list" id="content">
+        <script id="test" type="text/html">
+                {{each list as value i}}
+                <li>
+                    <div class="lt">
+                        <h5>{{value.nickname}} (douyu:
+                            {{if value.douyu_nick}}
+                                {{value.douyu_nick}})
+                            {{/if}}
+                            {{if !value.douyu_nick}}
+                                可能不是个韭菜水友，不要理他
+                            {{/if}}
+                        </h5>
+                        <p>
+                            <span>金额：{{value.value}}元</span>
+                            {{if value.type == 2}}
+                            <span>还款日期：{{value.paytime}}</span>
+                            {{/if}}
+                            {{if value.type == 1}}
+                            <span>52004 永不还钱</span>
+                            {{/if}}
+                        </p>
+                    </div>
+                    <div class="rt">
+                        {{if value.state == 1}}
+                        <span class="primary">已申请</span>
+                        {{/if}}
+                        {{if value.state == 2}}
+                        <span class="success">已通过</span>
+                        {{/if}}
+                    </div>
+                </li>
+                {{/each}}
+        </script>
 
-            </div>
-            <div class="rt">
-                <button>已申请</button>
-            </div>
-        </li>
     </ul>
 </div>
 <div class="contact">
@@ -107,4 +126,8 @@
 <script src="js/bootstrap.min.js"></script>
 <script src="js/comm.js"></script>
 <script src="js/dialog.js"></script>
+<script src="js/template.js"></script>
+<script src="js/loan.js"></script>
+
+
 </html>
