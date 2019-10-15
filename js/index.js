@@ -1,6 +1,7 @@
 $(function () {
 
     // $('.modal').modal('show');
+    readImg();
 
     // baner轮播
     $('#carousel-example-generic').carousel({
@@ -11,6 +12,7 @@ $(function () {
     $('.btn_download').click(function () {
         clear();
         $('.modal').modal('show');
+        $('.page2').show();
     });
 
     // 还款类型
@@ -23,7 +25,7 @@ $(function () {
             $('.date_show').removeClass('animated  fadeIn');
             $('.date_show').hide();
         }
-    })
+    });
 
     // 更换图形验证码
     $('.imgvalid img').click(function () {
@@ -153,10 +155,10 @@ function nextStep() {
             return false
         }
     }
-    $('.page1').addClass('animated fadeOut')
+    $('.page1').addClass('animated fadeOut');
     $('.page1').hide();
     $('.page2').show();
-    $('.page2').addClass('animated fadeIn')
+    $('.page2').addClass('animated fadeIn');
 }
 
 // 审核进度
@@ -166,4 +168,18 @@ function showCode(code) {
         content: '您的申请已提交，请等待审核。如需查询审核进度，请凭审核码（' + code + '）查询进度'
     });
     d.show();
+}
+
+function readImg() {
+    var url = 'http://baigei.wblnb.com/api/captcha.php';//获取
+    var postdata = {};
+    $.post(url, postdata, function (result) {
+        var JSON = eval('(' + result + ')');
+        if(JSON.code == 0){
+            console.log(JSON.data);
+        }else{
+            console.log(JSON);
+            toastr.warning(JSON.memo,'提示',opts);
+        }
+    });
 }
