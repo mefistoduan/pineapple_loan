@@ -1,6 +1,5 @@
 $(function () {
 
-    // $('.modal').modal('show');
     readImg();
 
     // baner轮播
@@ -12,7 +11,6 @@ $(function () {
     $('.btn_download').click(function () {
         clear();
         $('.modal').modal('show');
-        $('.page2').show();
     });
 
     // 还款类型
@@ -29,21 +27,20 @@ $(function () {
 
     // 更换图形验证码
     $('.imgvalid img').click(function () {
-        var thisSrc = '';
-        $('.imgvalid img').attr('src',thisSrc);
+        readImg();
     });
 
     $('.date-picker').datepicker({
         language: "zh-CN",
         autoclose: true,
         format: "yyyy-mm-dd",
-        defaultViewDate: {year: 2019, month: 12, day: 31}
+        defaultViewDate: {year: 2020, month: 12, day: 31}
     });
 
     $('#EndTime input').change(function (e) {
         var thisVal = $(this).val();
         var year = parseInt(thisVal.slice(0, 4));
-        if (year > 2020) {
+        if (year > 2021) {
             // todo
             // 哥，你这怕不是想直接赖账吧!
         }
@@ -56,53 +53,56 @@ $(function () {
         var ur_idea = $('#ur_idea').val();
         var imgValid = $('#ur_img').val();
         var ur_name = $('#ur_name').val();
-        var ur_qq = $('#ur_qq').val();
         var ur_fish = $('#ur_fish').val();
-        if(ur_value < 0){
+        var ur_email = $('#ur_email').val();
+        var ur_paytime = $('#EndTime input').val();
+        if (ur_value < 0) {
             warning('倒给钱不如去直播间刷礼物咯，欧尼酱~');
             return false
         }
-        if(ur_value > 999){
+        if (ur_value > 999) {
             warning('小本买卖啊，别这样别这样~');
             return false
         }
-        if(!ur_idea){
+        if (!ur_idea) {
             warning('理由都懒得写，哥哥你能不能花点心思骗骗我');
             return false
         }
-        if(ur_idea.length > 200){
+        if (ur_idea.length > 200) {
             warning('字太多不看，200字够你发挥你的实力了啊');
             return false
         }
-        if(!imgValid){
+        if (!imgValid) {
             warning('敲桌！图形验证码必填');
             return false
         }
-        if(imgValid.length != 4){
+        if (imgValid.length != 5) {
             warning('敲桌！图形验证码位数不正确');
             return false
         }
-        var code = 123456;
-        var url = '';//获取
+
+        var url = urlParms + '/api/add.php';//获取
         var postdata = {
-            ur_value: ur_value,
-            ur_idea: ur_idea,
-            imgValid: imgValid,
-            imgValid: ur_name,
-            imgValid: ur_qq,
-            imgValid: ur_fish,
+            value: ur_value,
+            name: ur_name,
+            email: ur_email,
+            paytime:ur_paytime,
+            reason: ur_idea,
+            douyu_name: ur_fish,
+            captcha: imgValid,
         };
-        $.post(url, postdata, function (result) {
+        $.get(url, postdata, function (result) {
             var JSON = eval('(' + result + ')');
-            if(JSON.code == 0){
-                toastr.success('修改成功','提示',opts);
-                initDatatable();
-            }else{
+            if (JSON.code == 0) {
+                warning('提交成功');
+                $('.modal').modal('hide');
+                // showCode(code)
+            } else {
                 console.log(JSON);
-                toastr.warning(JSON.memo,'提示',opts);
+                warning(JSON.msg);
             }
         });
-        showCode(code);
+        readImg();
     });
 
     // 下一页
@@ -116,12 +116,12 @@ function clear() {
 
     $('.page1 input').val('');
     $('.page2 input').val('');
-    $('.page2 textare').val('');
+    $('.page2 textarea').val('');
     $('.page1').show();
     $('.page2').hide();
     $('.page1').removeClass('animated  fadeOut');
     $('.page2').removeClass('animated  fadeIn');
-    $('#ur_paytype option').eq(0).attr("selected",true);
+    $('#ur_paytype option').eq(0).attr("selected", true);
     $('.date_show').removeClass('animated  fadeIn');
     $('.date_show').hide();
 }
@@ -129,8 +129,9 @@ function clear() {
 function nextStep() {
     // checkInfo
     var ur_name = $('#ur_name').val();
-    var ur_qq = $('#ur_qq').val();
+    var ur_email = $('#ur_email').val();
     var ur_fish = $('#ur_fish').val();
+    $('.date-picker input').val(curentTime());
     if (!ur_name) {
         warning('昵称不能为空啊，兄弟~');
         return false
@@ -140,17 +141,20 @@ function nextStep() {
         $('#ur_name').val('');
         return false
     }
-    if (!ur_qq) {
-        warning('qq为空,怎么给你打钱?');
+    if (!ur_email) {
+        warning('email为空,怎么给你打钱?');
         return false
     }
-    if (ur_qq.length > 12 || ur_qq.length  < 6) {
+    if (ur_email.length > 12 || ur_email.length < 6) {
         warning('乱写是骗不到菠菠的钱的?');
         $('#ur_qq').val('');
         return false
     }
+    if(!checkEmail(ur_email)){
+        warning('乱写是骗不到菠菠的钱的?');
+    }
     if (ur_fish) {
-        if(ur_fish.length > 20){
+        if (ur_fish.length > 20) {
             warning('老铁,斗鱼id有那么长嘛?');
             return false
         }
@@ -171,15 +175,16 @@ function showCode(code) {
 }
 
 function readImg() {
-    var url = 'http://baigei.wblnb.com/api/captcha.php';//获取
+    var url = urlParms + '/api/captcha.php';//获取
     var postdata = {};
     $.post(url, postdata, function (result) {
         var JSON = eval('(' + result + ')');
-        if(JSON.code == 0){
+        if (JSON.code == 0) {
+            $('#imgValid').attr('src', JSON.data);
             console.log(JSON.data);
-        }else{
+        } else {
             console.log(JSON);
-            toastr.warning(JSON.memo,'提示',opts);
+            warning(JSON.msg);
         }
     });
 }

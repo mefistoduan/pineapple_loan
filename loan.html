@@ -68,40 +68,43 @@
     </div>
     <ul class="subject_list" id="content">
         <script id="test" type="text/html">
-            {{if list}}
-                {{each list as value i}}
-                <li>
-                    <div class="lt">
-                        <h5>{{value.nickname}} (douyu:
-                            {{if value.douyu_nick}}
-                                {{value.douyu_nick}})
-                            {{/if}}
-                            {{if !value.douyu_nick}}
-                                可能不是个韭菜水友，不要理他
-                            {{/if}}
-                        </h5>
-                        <p>
-                            <span>金额：{{value.value}}元</span>
-                            {{if value.type == 2}}
-                            <span>还款日期：{{value.paytime}}</span>
-                            {{/if}}
-                            {{if value.type == 1}}
-                            <span class="red">52004 永不还钱</span>
-                            {{/if}}
-                        </p>
-                    </div>
-                    <div class="rt">
-                        {{if value.state == 1}}
-                        <span class="primary">已申请</span>
+            {{if data}}
+            {{each data as value i}}
+            <li>
+                <div class="lt">
+                    <h5>{{value.name}} (douyu:
+                        {{if value.douyu_name}}
+                        {{value.douyu_name}})
                         {{/if}}
-                        {{if value.state == 2}}
-                        <span class="success">已通过</span>
+                        {{if !value.douyu_nick}}
+                        可能不是个韭菜水友，不要理他
                         {{/if}}
-                    </div>
-                </li>
-                {{/each}}
+                    </h5>
+                    <p>
+                        <span>金额：{{value.value}}元</span>
+                        {{if value.type == 2}}
+                        <span>还款日期：{{value.paytime}}</span>
+                        {{/if}}
+                        {{if value.opinion}}
+                        <span class="red">{{ value.opinion}}</span>
+                        {{/if}}
+                        {{if !value.opinion}}
+                        <span class="red">正在审核，暂未批复</span>
+                        {{/if}}
+                    </p>
+                </div>
+                <div class="rt">
+                    {{if value.state == 1}}
+                    <span class="primary">已申请</span>
+                    {{/if}}
+                    {{if value.state == 2}}
+                    <span class="success">已通过</span>
+                    {{/if}}
+                </div>
+            </li>
+            {{/each}}
             {{/if}}
-            {{if !list}}
+            {{if !data}}
             <p>木有结果，木得感情</p>
             {{/if}}
         </script>

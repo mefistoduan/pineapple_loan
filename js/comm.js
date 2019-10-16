@@ -1,4 +1,7 @@
+var urlParms = '/baigei';
 $(function () {
+
+
 
     $('.sel .lt li').hover(function (e) {
         $('.sel .lt li').removeClass('active');
@@ -44,4 +47,33 @@ function warning(text) {
         }
     });
     d.show();
+}
+
+function checkEmail(val)
+{
+    var re = /^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]+$/;
+
+    if(val.search(re) == -1) {
+        //alert("输入的邮箱格式不正确");
+        return false;
+    }
+    else {
+        return true;
+    }
+}
+
+// 获取当前时间
+function curentTime() {
+    var now = new Date();
+    var year = now.getFullYear();       //年
+    var month = now.getMonth() + 1;     //月
+    var day = now.getDate();            //日
+    var clock = year + "-";
+    if (month < 10)
+        clock += "0";
+    clock += month + "-";
+    if (day < 10)
+        clock += "0";
+    clock += day + " ";
+    return (clock);
 }

@@ -830,6 +830,7 @@
     float: left;
 }
 .imgvalid img {
+    width: 100px;
     height: 34px;
     float: right;
 }
