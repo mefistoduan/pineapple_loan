@@ -70,11 +70,21 @@
 .subject_list li .rt {
     float: right;
 }
+.subject_list .lt h4 {
+    width: 100%;
+    overflow: hidden;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 8px;
+    font-size: 16px;
+    color: #333;
+}
 .subject_list .lt h5 {
     width: 100%;
     overflow: hidden;
     display: block;
     margin: 0 auto;
+    margin-top: 8px;
     margin-bottom: 8px;
     font-size: 16px;
     color: #333;

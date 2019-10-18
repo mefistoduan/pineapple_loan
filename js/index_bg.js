@@ -1,4 +1,4 @@
-var size = 10, res = 60, sizeres = size * res, halfsizeres = sizeres / 2;
+var size = 10, res = 40, sizeres = size * res, halfsizeres = sizeres / 2;
 var buffer1 = [], buffer2 = [], temp;
 var grid = [], plane;
 var scene, camera, light, renderer;
@@ -23,16 +23,16 @@ function init() {
     scene = new THREE.Scene();
 
     camera = new THREE.PerspectiveCamera(50, window.innerWidth / window.innerHeight, 1, 2000);
-    camera.position.x = 80 + sizeres;
-    camera.position.y = 600;
-    camera.position.z = 20 + sizeres;
-    camera.lookAt(new THREE.Vector3(halfsizeres, -50, halfsizeres));
+    camera.position.x = 40 + sizeres;
+    camera.position.y = 150;
+    camera.position.z = 120 + sizeres;
+    camera.lookAt(new THREE.Vector3(halfsizeres, -40, halfsizeres));
     scene.add(camera);
 
     scene.add(new THREE.AmbientLight(0xd94d51));
 
     light = new THREE.SpotLight(0xffffff, 1.25);
-    light.position.set(-500, 900, 600);
+    light.position.set(-500, 900, 300);
     light.target.position.set(halfsizeres, 0, halfsizeres);
     light.castShadow = true;
     scene.add(light);

@@ -61,10 +61,10 @@
         <span>你们成功的忽悠到了菠菠，还有什么比这更厉害的么？</span>
     </div>
     <div class="search">
-<!--        <div>-->
-<!--            <input type="text" id="search" class="pull-left" placeholder="输入你的查询码">-->
-<!--            <button class="btn search_btn">查询</button>-->
-<!--        </div>-->
+        <!--        <div>-->
+        <!--            <input type="text" id="search" class="pull-left" placeholder="输入你的查询码">-->
+        <!--            <button class="btn search_btn">查询</button>-->
+        <!--        </div>-->
     </div>
     <ul class="subject_list" id="content">
         <script id="test" type="text/html">
@@ -72,25 +72,26 @@
             {{each data as value i}}
             <li>
                 <div class="lt">
-                    <h5>{{value.name}} (douyu:
+                    <h4>{{value.name}} (douyu:
                         {{if value.douyu_name}}
                         {{value.douyu_name}})
                         {{/if}}
                         {{if !value.douyu_nick}}
                         可能不是个韭菜水友，不要理他
                         {{/if}}
-                    </h5>
+                    </h4>
                     <p>
                         <span>金额：{{value.value}}元</span>
                         {{if value.type == 2}}
-                        <span>还款日期：{{value.paytime}}</span>
+                            <span>还款日期：{{value.paytime}}</span>
                         {{/if}}
                         {{if value.opinion}}
-                        <span class="red">{{ value.opinion}}</span>
-                        {{/if}}
-                        {{if !value.opinion}}
-                        <span class="red">正在审核，暂未批复</span>
-                        {{/if}}
+                    <h5>{{value.reason}}</h5>
+                    <span class="red">组织批复：{{ value.opinion}}</span>
+                    {{/if}}
+                    {{if !value.opinion}}
+                    <span class="red">组织批复：正在审核，暂未批复</span>
+                    {{/if}}
                     </p>
                 </div>
                 <div class="rt">

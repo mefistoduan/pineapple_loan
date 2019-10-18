@@ -74,10 +74,12 @@ $(function () {
         }
         if (!imgValid) {
             warning('敲桌！图形验证码必填');
+            $('#ur_img').val('');
             return false
         }
         if (imgValid.length != 5) {
             warning('敲桌！图形验证码位数不正确');
+            $('#ur_img').val('');
             return false
         }
 
@@ -96,13 +98,17 @@ $(function () {
             if (JSON.code == 0) {
                 warning('提交成功');
                 $('.modal').modal('hide');
+                readImg();
                 // showCode(code)
             } else {
                 console.log(JSON);
                 warning(JSON.msg);
+                readImg();
+                if(JSON.code == 1){
+                    $('#ur_img').val('');
+                }
             }
         });
-        readImg();
     });
 
     // 下一页
@@ -181,7 +187,6 @@ function readImg() {
         var JSON = eval('(' + result + ')');
         if (JSON.code == 0) {
             $('#imgValid').attr('src', JSON.data);
-            console.log(JSON.data);
         } else {
             console.log(JSON);
             warning(JSON.msg);
